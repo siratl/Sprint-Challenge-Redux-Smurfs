@@ -15,7 +15,7 @@ import {
   DELETING_SMURF,
   DELETING_SMURF_SUCCESSFUL,
   DELETING_SMURF_FAILED,
-} from '../actions'
+} from '../actions';
 
 const initialState = {
   smurfs: [],
@@ -35,7 +35,7 @@ const initialState = {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-const smurfReducer = (state = initialState, action) => {
+function reducer (state = initialState, action) {
   switch (action.type) {
     case FETCHING_SMURFS:
       return {
@@ -127,4 +127,4 @@ const smurfReducer = (state = initialState, action) => {
   }
 };
 
-export default smurfReducer
+export default reducer;
