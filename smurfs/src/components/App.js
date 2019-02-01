@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { connect } from 'react-redux';
-import { fetchSmurfs } from '../actions';
+import { fetchSmurfs, addSmurf } from '../actions';
 import Loader from 'react-loader-spinner';
 import Smurfs from './Smurfs';
+import SmurfForm from './SmurfForm';
 
 /*
  to wire this component up you're going to need a few things.
@@ -14,13 +15,18 @@ import Smurfs from './Smurfs';
  */
 class App extends Component {
   componentDidMount() {
-    this.props.fetchSmurfs()
+    this.props.fetchSmurfs();
   }
+
+  addSmurf = smurf => {
+    this.props.addSmurf(smurf);
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Smurf Village</h1>
-        {(this.props.fetchingSmurfs) && (
+        {this.props.fetchingSmurfs && (
           <Loader type="ThreeDots" color="#88CCFF" height="60" width="60" />
         )}
         {this.props.error ? (
@@ -28,6 +34,7 @@ class App extends Component {
         ) : (
           <Smurfs smurfs={this.props.smurfs} />
         )}
+        <SmurfForm addSmurf={this.addSmurf} />
       </div>
     );
   }
@@ -36,10 +43,12 @@ class App extends Component {
 const mapStateToProps = state => ({
   smurfs: state.smurfs,
   fetchingSmurfs: state.fetchingSmurfs,
+  addingSmurf: state.addingSmurf,
+  updatingSmurf: state.updatingSmurf,
   error: state.error,
 });
 
 export default connect(
   mapStateToProps,
-  { fetchSmurfs },
+  { fetchSmurfs, addSmurf },
 )(App);
