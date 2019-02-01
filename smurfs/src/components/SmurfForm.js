@@ -42,7 +42,7 @@ class SmurfForm extends Component {
 
   render() {
     return (
-      <div className="SmurfForm">
+      <div className="smurfForm">
         <Form onSubmit={this.addSmurf} id="smurfForm">
           <FormText>Complete Form Below to add Smurf</FormText>
           <FormGroup row>

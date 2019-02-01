@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Smurf Village</h1>
+        <SmurfForm addSmurf={this.addSmurf} />
         {this.props.fetchingSmurfs && (
           <Loader type="ThreeDots" color="#88CCFF" height="60" width="60" />
         )}
@@ -34,7 +35,7 @@ class App extends Component {
         ) : (
           <Smurfs smurfs={this.props.smurfs} />
         )}
-        <SmurfForm addSmurf={this.addSmurf} />
+        
       </div>
     );
   }
