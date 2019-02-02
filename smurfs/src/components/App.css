@@ -8,12 +8,26 @@ h1 {
   text-shadow: 2px 2px 2px rgb(107, 171, 255);
 }
 
+h4 {
+  text-shadow: 1px 1px 2px rgb(107, 171, 255);
+}
+
 .smurfForm{
   border: 1px solid grey;
   box-shadow: 1px 1px 5px rgb(82, 82, 82);
   padding: 15px 55px;
   border-radius: 5px;
   background-color: rgb(252, 242, 229, .5);
+  position: relative;
+}
+
+.smurfForm img {
+  width: 90px;
+  right: 10px;
+  bottom: -13px;
+  position: absolute;
+  float: top;
+  filter: drop-shadow( 2px 2px 3px black);
 }
 
 .smurf {

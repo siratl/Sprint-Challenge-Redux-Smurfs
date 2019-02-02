@@ -96,6 +96,9 @@ class SmurfForm extends Component {
             </Col>
           </FormGroup>
         </Form>
+      
+          <img className='smurfGif' alt='smurf Wink' src="https://orig00.deviantart.net/3161/f/2012/243/8/4/handy_winking_by_kiss_the_iconist-d5d47rx.gif" />
+      
       </div>
     );
   }
