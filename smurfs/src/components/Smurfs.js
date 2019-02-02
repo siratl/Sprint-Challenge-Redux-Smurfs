@@ -4,11 +4,17 @@ import Smurf from './Smurf';
 const Smurfs = props => {
   return (
     <div className="smurfs">
-      <div className="smurfsCardsWrapper">
-        {props.smurfs.map(smurf => (
-          <Smurf key={smurf.name} smurf={smurf} />
-        ))}
-      </div>
+      {props.smurfs.map(smurf => (
+        <div key={smurf.name} className="smurfsCardsWrapper">
+          <span
+            className="deletebtn"
+            onClick={() => props.deleteSmurf(smurf.id)}
+          >
+            delete
+          </span>
+          <Smurf smurf={smurf} />
+        </div>
+      ))}
     </div>
   );
 };

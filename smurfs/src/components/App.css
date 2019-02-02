@@ -4,26 +4,42 @@
   margin: 0 auto;
 }
 
+h1 {
+  text-shadow: 2px 2px 2px rgb(107, 171, 255);
+}
+
 .smurfForm{
   border: 1px solid grey;
   box-shadow: 1px 1px 5px rgb(82, 82, 82);
   padding: 15px 55px;
   border-radius: 5px;
+  background-color: rgb(252, 242, 229, .5);
 }
 
 .smurf {
   padding: 10px 70px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.smurfsCardsWrapper {
+  border: 1px solid rgb(189, 189, 189);
+  width: 80%;
+  margin: 15px auto;
+  border-radius: 5px;
+  background: white;
+  position: relative;
+  box-shadow: 1px 1px 5px rgb(82, 82, 82);
 }
 
-.App-intro {
-  font-size: large;
+.deletebtn {
+  float: right;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.deletebtn:hover {
+  color: red;
+  text-shadow: 1px 1px 1px grey;
+  font-weight: 500;
 }

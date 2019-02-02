@@ -47,7 +47,7 @@ class SmurfForm extends Component {
           <FormText>Complete Form Below to add Smurf</FormText>
           <FormGroup row>
             <Label for="name" sm={2}>
-              Name
+              <strong> Name </strong>
             </Label>
             <Col sm={10}>
               <Input
@@ -62,7 +62,7 @@ class SmurfForm extends Component {
           </FormGroup>
           <FormGroup row>
             <Label for="age" sm={2}>
-              Age
+              <strong>Age</strong>
             </Label>
             <Col sm={10}>
               <Input
@@ -77,7 +77,7 @@ class SmurfForm extends Component {
           </FormGroup>
           <FormGroup row>
             <Label for="height" sm={2}>
-              Height
+              <strong>Height</strong>
             </Label>
             <Col sm={10}>
               <Input
